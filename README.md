@@ -1,1 +1,1 @@
-# qr-code-generator-java
+# word-count-java
