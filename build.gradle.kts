@@ -4,8 +4,7 @@ plugins {
 }
 
 group = "fgu.code.challenges"
-version = "0.0.1-SNAPSHOT"
-
+version = "1.0.0"
 java {
 }
 
@@ -27,4 +26,12 @@ repositories {
 }
 kotlin {
 	jvmToolchain(17)
+}
+
+tasks.withType<Jar> {
+	manifest {
+		attributes["Main-Class"] = "fgu.word.count.Application"
+	}
+
+	from(sourceSets.main.get().output)
 }
